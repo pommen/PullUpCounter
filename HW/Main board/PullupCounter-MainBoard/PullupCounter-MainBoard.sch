@@ -5,9 +5,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "Pullupcounter Main board"
+Date "2018-08-19"
+Rev "A"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -1411,4 +1411,359 @@ Wire Notes Line
 	600  7700 600  4150
 Text Notes 3650 4750 0    50   ~ 0
 MCU
+$Comp
+L Peters:ROTARY-ENCODER-Ebay ROT?
+U 1 1 5B8AC2C8
+P 4300 1400
+F 0 "ROT?" H 4300 1650 60  0000 C CNN
+F 1 "ROTARY-ENCODER-Ebay" V 4250 600 60  0000 C CNN
+F 2 "" H 4300 1400 60  0000 C CNN
+F 3 "" H 4300 1400 60  0000 C CNN
+	1    4300 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HC14 U?
+U 1 1 5B8AC6BB
+P 5800 1300
+F 0 "U?" H 5800 1617 50  0000 C CNN
+F 1 "74HC14" H 5800 1526 50  0000 C CNN
+F 2 "" H 5800 1300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 5800 1300 50  0001 C CNN
+	1    5800 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5B8B0A8E
+P 4950 900
+F 0 "#PWR?" H 4950 750 50  0001 C CNN
+F 1 "VCC" H 4967 1073 50  0000 C CNN
+F 2 "" H 4950 900 50  0001 C CNN
+F 3 "" H 4950 900 50  0001 C CNN
+	1    4950 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B8B0B5E
+P 4650 1400
+F 0 "#PWR?" H 4650 1150 50  0001 C CNN
+F 1 "GND" V 4655 1272 50  0000 R CNN
+F 2 "" H 4650 1400 50  0001 C CNN
+F 3 "" H 4650 1400 50  0001 C CNN
+	1    4650 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B8B2E67
+P 4950 1100
+F 0 "R?" H 5020 1146 50  0000 L CNN
+F 1 "100K" H 5020 1055 50  0000 L CNN
+F 2 "" V 4880 1100 50  0001 C CNN
+F 3 "~" H 4950 1100 50  0001 C CNN
+	1    4950 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 1250 4950 1300
+Wire Wire Line
+	4950 950  4950 900 
+$Comp
+L Device:R R?
+U 1 1 5B8B762B
+P 5250 1300
+F 0 "R?" V 5043 1300 50  0000 C CNN
+F 1 "10K" V 5134 1300 50  0000 C CNN
+F 2 "" V 5180 1300 50  0001 C CNN
+F 3 "~" H 5250 1300 50  0001 C CNN
+	1    5250 1300
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 1300 5100 1300
+Connection ~ 4950 1300
+Wire Wire Line
+	5400 1300 5450 1300
+$Comp
+L Device:C C?
+U 1 1 5B8BBF19
+P 5450 1600
+F 0 "C?" H 5565 1646 50  0000 L CNN
+F 1 "100n" H 5565 1555 50  0000 L CNN
+F 2 "" H 5488 1450 50  0001 C CNN
+F 3 "~" H 5450 1600 50  0001 C CNN
+	1    5450 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B8BBFC8
+P 5450 1750
+F 0 "#PWR?" H 5450 1500 50  0001 C CNN
+F 1 "GND" H 5455 1577 50  0000 C CNN
+F 2 "" H 5450 1750 50  0001 C CNN
+F 3 "" H 5450 1750 50  0001 C CNN
+	1    5450 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 1450 5450 1300
+Connection ~ 5450 1300
+Wire Wire Line
+	5450 1300 5500 1300
+$Comp
+L 74xx:74HC14 U?
+U 2 1 5B8BEEF5
+P 5800 2500
+F 0 "U?" H 5800 2817 50  0000 C CNN
+F 1 "74HC14" H 5800 2726 50  0000 C CNN
+F 2 "" H 5800 2500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 5800 2500 50  0001 C CNN
+	2    5800 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5B8BEEFB
+P 4950 2100
+F 0 "#PWR?" H 4950 1950 50  0001 C CNN
+F 1 "VCC" H 4967 2273 50  0000 C CNN
+F 2 "" H 4950 2100 50  0001 C CNN
+F 3 "" H 4950 2100 50  0001 C CNN
+	1    4950 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2500 4950 2500
+$Comp
+L Device:R R?
+U 1 1 5B8BEF02
+P 4950 2300
+F 0 "R?" H 5020 2346 50  0000 L CNN
+F 1 "100K" H 5020 2255 50  0000 L CNN
+F 2 "" V 4880 2300 50  0001 C CNN
+F 3 "~" H 4950 2300 50  0001 C CNN
+	1    4950 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 2450 4950 2500
+Wire Wire Line
+	4950 2150 4950 2100
+$Comp
+L Device:R R?
+U 1 1 5B8BEF0A
+P 5250 2500
+F 0 "R?" V 5043 2500 50  0000 C CNN
+F 1 "10K" V 5134 2500 50  0000 C CNN
+F 2 "" V 5180 2500 50  0001 C CNN
+F 3 "~" H 5250 2500 50  0001 C CNN
+	1    5250 2500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4950 2500 5100 2500
+Connection ~ 4950 2500
+Wire Wire Line
+	5400 2500 5450 2500
+$Comp
+L Device:C C?
+U 1 1 5B8BEF13
+P 5450 2800
+F 0 "C?" H 5565 2846 50  0000 L CNN
+F 1 "100n" H 5565 2755 50  0000 L CNN
+F 2 "" H 5488 2650 50  0001 C CNN
+F 3 "~" H 5450 2800 50  0001 C CNN
+	1    5450 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B8BEF19
+P 5450 2950
+F 0 "#PWR?" H 5450 2700 50  0001 C CNN
+F 1 "GND" H 5455 2777 50  0000 C CNN
+F 2 "" H 5450 2950 50  0001 C CNN
+F 3 "" H 5450 2950 50  0001 C CNN
+	1    5450 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5450 2650 5450 2500
+Connection ~ 5450 2500
+Wire Wire Line
+	5450 2500 5500 2500
+Wire Wire Line
+	4800 2500 4800 1500
+Wire Wire Line
+	4800 1500 4650 1500
+$Comp
+L power:GND #PWR?
+U 1 1 5B8C48FE
+P 3750 1300
+F 0 "#PWR?" H 3750 1050 50  0001 C CNN
+F 1 "GND" H 3755 1127 50  0000 C CNN
+F 2 "" H 3750 1300 50  0001 C CNN
+F 3 "" H 3750 1300 50  0001 C CNN
+	1    3750 1300
+	1    0    0    -1  
+$EndComp
+Text GLabel 6100 1300 2    50   Input ~ 0
+encA
+Text GLabel 3450 5000 0    50   Input ~ 0
+encA
+Text GLabel 6100 2500 2    50   Input ~ 0
+encB
+Text GLabel 3400 4850 0    50   Input ~ 0
+encB
+Text GLabel 6050 3500 2    50   Input ~ 0
+encBTN
+$Comp
+L 74xx:74HC14 U?
+U 3 1 5B8C84B9
+P 5150 3500
+F 0 "U?" H 5150 3817 50  0000 C CNN
+F 1 "74HC14" H 5150 3726 50  0000 C CNN
+F 2 "" H 5150 3500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 5150 3500 50  0001 C CNN
+	3    5150 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5B8C84BF
+P 4250 3100
+F 0 "#PWR?" H 4250 2950 50  0001 C CNN
+F 1 "VCC" H 4267 3273 50  0000 C CNN
+F 2 "" H 4250 3100 50  0001 C CNN
+F 3 "" H 4250 3100 50  0001 C CNN
+	1    4250 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5B8C84C6
+P 4250 3300
+F 0 "R?" H 4320 3346 50  0000 L CNN
+F 1 "100K" H 4320 3255 50  0000 L CNN
+F 2 "" V 4180 3300 50  0001 C CNN
+F 3 "~" H 4250 3300 50  0001 C CNN
+	1    4250 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 3450 4250 3500
+Wire Wire Line
+	4250 3150 4250 3100
+$Comp
+L Device:R R?
+U 1 1 5B8C84CE
+P 4600 3500
+F 0 "R?" V 4393 3500 50  0000 C CNN
+F 1 "10K" V 4484 3500 50  0000 C CNN
+F 2 "" V 4530 3500 50  0001 C CNN
+F 3 "~" H 4600 3500 50  0001 C CNN
+	1    4600 3500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4250 3500 4450 3500
+Connection ~ 4250 3500
+Wire Wire Line
+	4750 3500 4800 3500
+$Comp
+L Device:C C?
+U 1 1 5B8C84D7
+P 4800 3700
+F 0 "C?" H 4915 3746 50  0000 L CNN
+F 1 "100n" H 4915 3655 50  0000 L CNN
+F 2 "" H 4838 3550 50  0001 C CNN
+F 3 "~" H 4800 3700 50  0001 C CNN
+	1    4800 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B8C84DD
+P 4800 3850
+F 0 "#PWR?" H 4800 3600 50  0001 C CNN
+F 1 "GND" H 4805 3677 50  0000 C CNN
+F 2 "" H 4800 3850 50  0001 C CNN
+F 3 "" H 4800 3850 50  0001 C CNN
+	1    4800 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 3550 4800 3500
+Connection ~ 4800 3500
+Wire Wire Line
+	4800 3500 4850 3500
+Text GLabel 3350 5150 2    50   Input ~ 0
+encBTN
+Wire Wire Line
+	3950 1300 3750 1300
+Wire Wire Line
+	3950 3500 3950 1500
+Wire Wire Line
+	3950 3500 4250 3500
+Wire Wire Line
+	4650 1300 4950 1300
+$Comp
+L 74xx:74HC14 U?
+U 4 1 5B8FF0BB
+P 5750 3500
+F 0 "U?" H 5750 3817 50  0000 C CNN
+F 1 "74HC14" H 5750 3726 50  0000 C CNN
+F 2 "" H 5750 3500 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74HC14" H 5750 3500 50  0001 C CNN
+	4    5750 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5B8FF326
+P 3650 1950
+F 0 "#PWR?" H 3650 1800 50  0001 C CNN
+F 1 "VCC" H 3667 2123 50  0000 C CNN
+F 2 "" H 3650 1950 50  0001 C CNN
+F 3 "" H 3650 1950 50  0001 C CNN
+	1    3650 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5B8FF32C
+P 3650 2150
+F 0 "#PWR?" H 3650 1900 50  0001 C CNN
+F 1 "GND" H 3655 1977 50  0000 C CNN
+F 2 "" H 3650 2150 50  0001 C CNN
+F 3 "" H 3650 2150 50  0001 C CNN
+	1    3650 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5B8FF332
+P 3650 2050
+F 0 "C?" H 3742 2096 50  0000 L CNN
+F 1 "100n" H 3742 2005 50  0000 L CNN
+F 2 "" H 3650 2050 50  0001 C CNN
+F 3 "~" H 3650 2050 50  0001 C CNN
+	1    3650 2050
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	3400 600  3400 4100
+Wire Notes Line
+	3400 4100 6400 4100
+Wire Notes Line
+	6400 4100 6400 600 
+Wire Notes Line
+	6400 600  3400 600 
+Text Notes 5650 750  0    50   ~ 0
+Rotary Encoder
+Text Notes 5100 3800 0    50   ~ 0
+BTN needs to be double inverted
 $EndSCHEMATC
