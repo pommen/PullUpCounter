@@ -36,6 +36,7 @@ void setCompileTime();
 void updateDisplay();
 void showTime();
 void pulsingHearts();
+
 int16_t oldEncPos, encPos;
 uint8_t buttonState;
 bool newNumer = 0;
@@ -48,20 +49,20 @@ int temp = 0;
 bool LEDOff = 0;
 unsigned long pullUpTime = 0;
 unsigned long pullUpHELDTime = 0;
-
 unsigned long hasGoneDownTime = 0;
-
 bool hasGoneDown = 0;
+uint16_t rangeUpdateTimer = 0;
+uint16_t clockUpdateTimer = 0;
 #define pinA A2
 #define pinB A1
 #define pinSw A0 //switch on enc
 #define STEPS 4
-
 char daysOfTheWeek[7][12] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 unsigned long lastMoved = 0;
 unsigned long MOVE_INTERVAL = 40; // mS
 int messageOffset;
 const byte chips = 2;
+float distanceReading = 0.00;
 
 UltraDistSensor mysensor;
 RTC_DS1307 rtc;
@@ -87,6 +88,13 @@ void setup()
       //showTime();
 
       //pulsingHearts();
+      /* 
+      while(1){
+            float prints = mysensor.distanceInCm();
+            Serial.println(prints);
+            delay(100); 
+      }
+ */
 }
 
 void loop()
@@ -95,7 +103,11 @@ void loop()
 
       encPos += encoder.getValue();
       DateTime now = rtc.now();
-      float distanceReading = mysensor.distanceInCm();
+      if (millis() - rangeUpdateTimer >= 100)
+      {
+            distanceReading = mysensor.distanceInCm();
+            rangeUpdateTimer = millis();
+      }
 
       //***********
 
