@@ -1,15 +1,15 @@
 /*
 Pullup counter till Arnfinn
 
+Maybe to be in 2.0: 
+
 Settings:
-Distance to be a pulklup
-Brightness
-Time?
+      Distance to be a pullup, like a motivational up arrow, or something
+      Brightness 0-15
+      Time - need more ledarrays to display properly
 
 todo:
-Distance sensing
-rtc
-Shut off disp after office hours?
+Fireware 1.0 done.
 
 
 */
