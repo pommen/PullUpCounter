@@ -1,0 +1,55 @@
+G94 ( Millimeters per minute feed rate. )
+G21 ( Units == Millimeters. )
+
+G90 ( Absolute coordinates. )
+G64 P0.01000 ( set maximum deviation from commanded toolpath )
+G21
+G90
+G94
+G21
+G90
+G94
+F300.00
+G00 Z1.0000
+M03 S20000
+G4 P1
+G00 X12.8920Y36.4730
+G01 Z-2.5000
+G01 Z0
+G00 Z1.0000
+G00 X12.8920Y19.4730
+G01 Z-2.5000
+G01 Z0
+G00 Z1.0000
+G00 X55.1420Y36.4730
+G01 Z-2.5000
+G01 Z0
+G00 Z1.0000
+G00 X55.1420Y19.4730
+G01 Z-2.5000
+G01 Z0
+G00 Z1.0000
+G00 X30.2760Y18.7230
+G01 Z-2.5000
+G01 Z0
+G00 Z1.0000
+G00 X32.8160Y18.7230
+G01 Z-2.5000
+G01 Z0
+G00 Z1.0000
+G00 X35.3560Y18.7230
+G01 Z-2.5000
+G01 Z0
+G00 Z1.0000
+G00 X37.8960Y18.7230
+G01 Z-2.5000
+G01 Z0
+G00 Z1.0000
+G00 X0.0000Y0.0000
+M05
+G04 P0 ( dwell for no time -- G64 should not smooth over this point )
+G00 Z10.000 ( retract )
+
+M5 ( Spindle off. )
+M9 ( Coolant off. )
+M2 ( Program end. )
