@@ -103,7 +103,7 @@ void setup()
       setCompileTime();
       //showTime();
 
-      //pulsingHearts();
+      pulsingHearts();
 }
 
 void loop()
@@ -115,7 +115,7 @@ void loop()
       if (millis() - clockUpdateTimer >= 30000) //read clock every 30 seconds
       {
             now = rtc.now();
-            // Serial.print(now.second(), DEC);
+            // Serial.print(now.second(), DEC);					
       }
 
       if (millis() - rangeUpdateTimer >= 100)
@@ -126,11 +126,11 @@ void loop()
 
       //***********
 
-      /* 
+   /*    
       Serial.print("Sensor Reading :");
       Serial.print(distanceReading);
-      Serial.println(" CM"); 
-      */
+      Serial.println(" CM");  */
+      
 
       if (distanceReading > 10.00)
       {
@@ -248,9 +248,9 @@ void updateDisplay()
       }
       else
       {
-            Serial.print("messageOffset: ");
+           /*  Serial.print("messageOffset: ");
 
-            Serial.println(messageOffset);
+            Serial.println(messageOffset); */
             display.sendSmooth(message, messageOffset);
             // next time show one pixel onwards
             if (messageOffset++ >= (int)(strlen(message) * 8))
@@ -312,11 +312,12 @@ void setCompileTime()
       if (!rtc.isrunning())
       {
             Serial.println("RTC is NOT running!");
-      }
+      rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
       Serial.print(" Setting RTC to compile time: ");
+      }
+if(Serial)       rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
 
       // following line sets the RTC to the date & time this sketch was compiled
-      rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
       // This line sets the RTC with an explicit date & time, for example to set
       // January 21, 2014 at 3am you would call:
       // rtc.adjust(DateTime(2014, 1, 21, 3, 0, 0));
